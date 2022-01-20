@@ -9,6 +9,9 @@ export class EmailController {
   // @NoAuth()
   @Post('/sendCode')
   async sendEmailCode(@Body() data) {
-    return this.emailService.sendEmailCode(data);
+    const { code } = await this.emailService.sendEmailCode(data);
+    if (code && code === 200) {
+      console.log('成功');
+    }
   }
 }

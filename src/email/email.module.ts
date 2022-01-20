@@ -16,7 +16,7 @@ import { EmailController } from './email.controller';
           pass: 'XHYHDOZOZRGRGCUF',
         },
       },
-      preview: true, //是否开启预览，开启了这个属性，在调试模式下会自动打开一个网页，预览邮件
+      preview: false, //是否开启预览，开启了这个属性，在调试模式下会自动打开一个网页，预览邮件
       // defaults: {
       //   from: '"邮箱验证" <daily_report2022@126.com>', //发送人 你的邮箱地址
       // },
