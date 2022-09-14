@@ -11,6 +11,8 @@ export class EmailService {
    * @param data 邮件主体信息
    */
   async sendEmailCode(data) {
+    console.log('abc');
+
     try {
       const code = Math.random().toString().slice(-6);
       const date = new Date();
@@ -45,6 +47,8 @@ export class EmailService {
             error,
           );
         });
+      console.log('成功');
+
       return { code: 200, message: '发送成功' };
     } catch (error) {
       console.error('发送邮件出错:', error);

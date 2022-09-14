@@ -20,7 +20,8 @@ export class register {
 
   @Post('/code')
   sendEmailCode(@Body() data) {
-    const registerCode = 123;
+    const registerCode = '123';
+    console.log(data);
     if (data.code === registerCode) return { code: 1, msg: 'hit' };
     return { code: 0, msg: 'fail', data };
   }
